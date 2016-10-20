@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.missionsv.android.seventhgear">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:noHistory="true"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Car"
+            android:label="Specifications"
+            android:noHistory="true"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".filter"
+            android:label="Filter"
+            android:noHistory="true" />
+        <activity
+            android:name=".Compare"
+            android:label="Compare"
+            android:noHistory="true" />
+        <activity
+            android:name=".ContactActivity"
+            android:label="Contact us"
+            android:noHistory="true" />
+        <activity
+            android:name=".SearchResultActivity"
+            android:label="Cars found"
+            android:noHistory="true" />
+        <activity
+            android:name=".compareEntry"
+            android:label="Choose Cars" />
+        <activity android:name=".About"
+            android:label="About"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_filter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.missionsv.android.seventhgear.filter">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:id="@+id/appBarLayout">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:title="Details"/>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:text="Company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="22dp"
+        android:id="@+id/textView6"
+        android:textSize="24sp"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <CheckBox
+        android:text="Chevrolet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView6"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/checkChevrolet" />
+
+    <CheckBox
+        android:text="Nissan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkMahindra"
+        android:layout_alignStart="@+id/checkMahindra"
+        android:layout_marginTop="6dp"
+        android:id="@+id/checkNissan"
+        android:layout_toStartOf="@+id/checkFord"
+        android:layout_alignEnd="@+id/checkMahindra" />
+
+    <CheckBox
+        android:text="Toyota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkNissan"
+        android:layout_alignStart="@+id/checkNissan"
+        android:layout_marginTop="6dp"
+        android:id="@+id/checkToyota"
+        android:layout_alignEnd="@+id/checkNissan" />
+
+    <CheckBox
+        android:text="Others"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkToyota"
+        android:layout_marginTop="13dp"
+        android:id="@+id/checkCompOthers"
+        android:layout_alignEnd="@+id/checkToyota"
+        android:layout_alignStart="@+id/checkToyota" />
+
+    <CheckBox
+        android:text="Maruti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkMaruti"
+        android:layout_alignBaseline="@+id/checkMahindra"
+        android:layout_alignBottom="@+id/checkMahindra"
+        android:layout_alignStart="@+id/checkFord" />
+
+    <CheckBox
+        android:text="Volkswagen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkVolkswagen"
+        android:layout_alignBaseline="@+id/checkToyota"
+        android:layout_alignBottom="@+id/checkToyota"
+        android:layout_toEndOf="@+id/textView6"
+        android:layout_marginStart="49dp" />
+
+    <CheckBox
+        android:text="Ford"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkFord"
+        android:layout_alignBaseline="@+id/checkChevrolet"
+        android:layout_alignBottom="@+id/checkChevrolet"
+        android:layout_alignStart="@+id/checkVolkswagen" />
+
+    <CheckBox
+        android:text="Renault"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkRenault"
+        android:layout_alignTop="@+id/checkNissan"
+        android:layout_alignStart="@+id/checkVolkswagen" />
+
+    <CheckBox
+        android:text="Mahindra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="6dp"
+        android:id="@+id/checkMahindra"
+        android:layout_below="@+id/checkChevrolet"
+        android:layout_alignStart="@+id/checkChevrolet" />
+
+    <TextView
+        android:text="Body Type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkCompOthers"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_marginTop="20dp"
+        android:id="@+id/textView13"
+        android:textSize="21sp"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <CheckBox
+        android:text="Hatchback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:id="@+id/checkHatch"
+        android:layout_below="@+id/textView13"
+        android:layout_alignStart="@+id/checkCompOthers" />
+
+    <CheckBox
+        android:text="Sedan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/checkHatch"
+        android:layout_alignStart="@+id/checkVolkswagen"
+        android:id="@+id/checkSedan" />
+
+    <CheckBox
+        android:text="SUV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkSUV"
+        android:layout_below="@+id/checkHatch"
+        android:layout_alignStart="@+id/checkHatch"
+        android:layout_marginTop="6dp" />
+
+    <CheckBox
+        android:text="Van"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkVan"
+        android:layout_alignBaseline="@+id/checkSUV"
+        android:layout_alignBottom="@+id/checkSUV"
+        android:layout_alignStart="@+id/checkSedan" />
+
+    <CheckBox
+        android:text="Jeep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkSUV"
+        android:layout_alignStart="@+id/checkSUV"
+        android:layout_marginTop="6dp"
+        android:id="@+id/checkJeep" />
+
+    <CheckBox
+        android:text="Coupe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/checkJeep"
+        android:layout_alignStart="@+id/checkVan"
+        android:id="@+id/checkCoupe" />
+
+    <CheckBox
+        android:text="Others"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkJeep"
+        android:layout_alignStart="@+id/checkJeep"
+        android:layout_marginTop="13dp"
+        android:id="@+id/checkBTOthers" /> <!--paste here-->
+
+    <TextView
+        android:text="Fuel Type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBTOthers"
+        android:layout_alignStart="@+id/textView13"
+        android:layout_marginTop="20dp"
+        android:id="@+id/textView14"
+        android:textSize="21sp"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <CheckBox
+        android:text="Diesel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView14"
+        android:layout_alignStart="@+id/checkBTOthers"
+        android:layout_marginTop="20dp"
+        android:id="@+id/checkDiesel" />
+
+    <CheckBox
+        android:text="Petrol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/checkDiesel"
+        android:layout_alignStart="@+id/checkCoupe"
+        android:id="@+id/checkPetrol" />
+
+    <CheckBox
+        android:text="CNG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkDiesel"
+        android:layout_alignStart="@+id/checkDiesel"
+        android:layout_marginTop="6dp"
+        android:id="@+id/checkCNG" />
+
+    <CheckBox
+        android:text="Hybrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/checkCNG"
+        android:layout_alignStart="@+id/checkPetrol"
+        android:id="@+id/checkHybrid" />
+
+    <TextView
+        android:text="Min. Mileage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkHybrid"
+        android:layout_alignStart="@+id/textView14"
+        android:layout_marginTop="20dp"
+        android:id="@+id/textView15"
+        android:textSize="21sp"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_marginTop="13dp"
+        android:id="@+id/txtMileage"
+        android:layout_width="130dp"
+        android:layout_below="@+id/textView15"
+        android:layout_toEndOf="@+id/checkJeep"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="kmpl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView17"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/txtMileage"
+        android:layout_alignBottom="@+id/txtMileage"
+        android:layout_toEndOf="@+id/checkFord" />
+
+    <TextView
+        android:text="Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView17"
+        android:layout_alignStart="@+id/textView15"
+        android:layout_marginTop="20dp"
+        android:id="@+id/textView16"
+        android:textSize="21sp"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <Spinner
+        android:layout_height="wrap_content"
+        android:id="@+id/spinPrice"
+        android:layout_width="250dp"
+        android:prompt="@string/price_prompt"
+        android:entries="@array/price_range"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/textView16"
+        android:layout_alignStart="@+id/checkCNG"
+        android:layout_marginStart="20dp" />
+
+    <Button
+        android:text="Done"
+        android:layout_width="match_parent"
+        android:layout_marginTop="19dp"
+        android:id="@+id/btnDone"
+        android:layout_height="60dp"
+        android:layout_below="@+id/spinPrice"
+        android:background="@color/colorPrimaryDark"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/background_light" />
+
+</RelativeLayout>
+
+   </ScrollView>

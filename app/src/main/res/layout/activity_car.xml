@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_car"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.missionsv.android.seventhgear.Car"
+    android:background="@android:color/white">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:id="@+id/appBarLayout">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:title="Details"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        app:srcCompat="@android:color/background_light"
+        android:id="@+id/imageView9"
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true"
+        />
+
+    <ImageView
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        app:srcCompat="@drawable/loading"
+        android:id="@+id/img"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/img"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/bg5"
+        android:layout_height="80dp">
+
+        <TextView
+            android:text="  Company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            android:textAlignment="viewStart"
+            android:textColor="?attr/actionModeSplitBackground" />
+
+        <TextView
+            android:text="..."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textCompany"
+            android:textSize="27sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="108dp"
+        android:layout_below="@+id/img"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/bg5"
+        android:layout_height="80dp">
+
+        <TextView
+            android:text="  Model"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            android:textAlignment="viewStart"
+            android:textColor="?attr/actionModeSplitBackground" />
+
+        <TextView
+            android:text="..."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textModel"
+            android:textSize="27sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="193dp"
+        android:layout_below="@+id/img"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/bg5"
+        android:layout_height="80dp">
+
+        <TextView
+            android:text="  Variant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            android:textAlignment="viewStart"
+            android:textColor="?attr/actionModeSplitBackground" />
+
+        <TextView
+            android:text="..."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textVariant"
+            android:textSize="27sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="278dp"
+        android:layout_below="@+id/img"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/bg5"
+        android:layout_height="80dp">
+
+        <TextView
+            android:text="  Body Type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            android:textAlignment="viewStart"
+            android:textColor="?attr/actionModeSplitBackground" />
+
+        <TextView
+            android:text="..."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textBodyType"
+            android:textSize="27sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="363dp"
+        android:layout_below="@+id/img"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/bg5"
+        android:layout_height="80dp">
+
+        <TextView
+            android:text="  Engine Capacity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            android:textAlignment="viewStart"
+            android:textColor="?attr/actionModeSplitBackground" />
+
+        <TextView
+            android:text="..."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textEngineCapacity"
+            android:textSize="27sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="448dp"
+        android:layout_below="@+id/img"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/bg5"
+        android:layout_height="80dp">
+
+        <TextView
+            android:text="  Fuel Supported"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            android:textAlignment="viewStart"
+            android:textColor="?attr/actionModeSplitBackground" />
+
+        <TextView
+            android:text="..."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textFuelSupported"
+            android:textSize="27sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="533dp"
+        android:layout_below="@+id/img"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/bg5"
+        android:layout_height="80dp">
+
+        <TextView
+            android:text="  Fuel tank Capacity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            android:textAlignment="viewStart"
+            android:textColor="?attr/actionModeSplitBackground" />
+
+        <TextView
+            android:text="..."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textFuelTank"
+            android:textSize="27sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="618dp"
+        android:layout_below="@+id/img"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/bg5"
+        android:layout_height="80dp">
+
+        <TextView
+            android:text="  Seaters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            android:textAlignment="viewStart"
+            android:textColor="?attr/actionModeSplitBackground" />
+
+        <TextView
+            android:text="..."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textSeating"
+            android:textSize="27sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="703dp"
+        android:layout_below="@+id/img"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/bg5"
+        android:layout_height="80dp">
+
+        <TextView
+            android:text="  Mileage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            android:textAlignment="viewStart"
+            android:textColor="?attr/actionModeSplitBackground" />
+
+        <TextView
+            android:text="..."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textMileage"
+            android:textSize="27sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="788dp"
+        android:layout_below="@+id/img"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/bg5"
+        android:layout_height="80dp">
+
+        <TextView
+            android:text="  Transmission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            android:textAlignment="viewStart"
+            android:textColor="?attr/actionModeSplitBackground" />
+
+        <TextView
+            android:text="..."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textTransmission"
+            android:textSize="27sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="873dp"
+        android:layout_below="@+id/img"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/bg5"
+        android:layout_height="80dp">
+
+        <TextView
+            android:text="  Max. Speed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            android:textAlignment="viewStart"
+            android:textColor="?attr/actionModeSplitBackground" />
+
+        <TextView
+            android:text="..."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textMSpeed"
+            android:textSize="27sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="958dp"
+        android:layout_below="@+id/img"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/bg5"
+        android:layout_height="80dp">
+
+        <TextView
+            android:text="  Anti-Lock Braking System"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            android:textAlignment="viewStart"
+            android:textColor="?attr/actionModeSplitBackground" />
+
+        <TextView
+            android:text="..."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textABS"
+            android:textSize="27sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="1043dp"
+        android:layout_below="@+id/img"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/bg5"
+        android:layout_height="80dp">
+
+        <TextView
+            android:text="  Airbag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            android:textAlignment="viewStart"
+            android:textColor="?attr/actionModeSplitBackground" />
+
+        <TextView
+            android:text="..."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textAirbag"
+            android:textSize="27sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="1128dp"
+        android:layout_below="@+id/img"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/bg5"
+        android:layout_height="80dp">
+
+        <TextView
+            android:text="  Price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            android:textAlignment="viewStart"
+            android:textColor="?attr/actionModeSplitBackground" />
+
+        <TextView
+            android:text="..."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textPrice"
+            android:textSize="27sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark" />
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+</ScrollView>

@@ -1,0 +1,50 @@
+{
+  "project_info": {
+    "project_number": "802282281114",
+    "firebase_url": "https://seventh-gear.firebaseio.com",
+    "project_id": "seventh-gear",
+    "storage_bucket": "seventh-gear.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:802282281114:android:dc6993f4beefa472",
+        "android_client_info": {
+          "package_name": "com.missionsv.android.seventhgear"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "802282281114-kv1hdkc5gvur3cibpjmuqouebftsit7e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.missionsv.android.seventhgear",
+            "certificate_hash": "BDCA9B9A1F457BFA969B16041F8FA3B6240EE100"
+          }
+        },
+        {
+          "client_id": "802282281114-cj78md4kb8dp4rs2tvit2qans6859u20.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeW22GWZD1n4YuEF4jiwf-UdVD3qyB_3A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
