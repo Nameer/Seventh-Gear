@@ -12,6 +12,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -34,6 +35,7 @@ import java.util.ArrayList;
 import java.util.Map;
 
 import static android.R.attr.id;
+import static android.os.Build.MODEL;
 import static com.google.android.gms.internal.zzapz.boo;
 import static com.missionsv.android.seventhgear.MainActivity.bCar;
 
@@ -54,15 +56,15 @@ public class SearchResultActivity extends AppCompatActivity {
         myOnClickListener = new MyOnClickListener(this);
 
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
-        recyclerView.setHasFixedSize(true);
+        //recyclerView.setHasFixedSize(true);
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
 
-        layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         data = new ArrayList<DataModel>();
         DatabaseReference mDatabase2;
@@ -96,7 +98,7 @@ public class SearchResultActivity extends AppCompatActivity {
                                         if (b.getInt("Price_Max")==0 || ((Double) newPost.get("PRICE")) < ((double)b.getInt("Price_Max")))
                                          {
                                              data.add(new DataModel(Integer.parseInt(car.getKey()),
-                                                     ((String) newPost.get("COMPANY"))+ ((String) newPost.get("MODEL")),
+                                                     ((String) newPost.get("COMPANY")) + " " + ((String) newPost.get("MODEL")),
                                                      (String) newPost.get("VARIANT"),
                                                      (String) newPost.get("URL")));
                                              found++;
@@ -104,8 +106,10 @@ public class SearchResultActivity extends AppCompatActivity {
                                 }
                             }
                         }
-                        else
-                            break;
+                        else{
+                            adapter = new CustomAdapter(data);
+                            recyclerView.setAdapter(adapter);
+                            break;}
                     }
                 Toast.makeText(SearchResultActivity.this, "Found " + Integer.toString(found) + " Cars", Toast.LENGTH_SHORT).show();
                 if (found==0)
@@ -115,12 +119,9 @@ public class SearchResultActivity extends AppCompatActivity {
             public void onCancelled(DatabaseError databaseError) {
             }
         });
-        adapter = new CustomAdapter(data);//
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(adapter);//
-        adapter.notifyDataSetChanged();
+        adapter = new CustomAdapter(data);
+        recyclerView.setAdapter(adapter);
+        //adapter.notifyDataSetChanged();
 
     }
 
@@ -142,12 +143,12 @@ public class SearchResultActivity extends AppCompatActivity {
             v.getContext().startActivity(intent);
             this.context.startActivity(intent);    //itestend*/
 
-            Activity activity = (Activity)v.getContext();
+            //Activity activity = (Activity)v.getContext();
             //FragmentActivity activity = (FragmentActivity)v.getContext();
             //FragmentManager manager = activity.getSupportFragmentManager();
 
 
-            Intent intent = new Intent(activity, Car.class);
+            Intent intent = new Intent(this.context, Car.class);
             Bundle b = new Bundle();
             TextView txtId=(TextView) v.findViewById(R.id.txtId);
             b.putInt("car",Integer.parseInt((String) txtId.getText()));
@@ -165,7 +166,7 @@ public class SearchResultActivity extends AppCompatActivity {
 
     public void onBackPressed()
     {
-        startActivity(new Intent(SearchResultActivity.this, filter.class));
+        //startActivity(new Intent(SearchResultActivity.this, filter.class));
         finish();
     }
 

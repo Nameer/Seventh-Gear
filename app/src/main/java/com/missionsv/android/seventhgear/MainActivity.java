@@ -280,6 +280,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             fab2.setClickable(false);
             fab3.setClickable(false);
             fab4.setClickable(false);
+            isFabOpen=false;
         } else {
             fab.startAnimation(rotate_forward);
             fab1.startAnimation(fab_open);

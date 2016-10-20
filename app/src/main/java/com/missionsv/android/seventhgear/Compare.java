@@ -227,7 +227,7 @@ public class Compare extends AppCompatActivity {
 
     public void onBackPressed()
     {
-        startActivity(new Intent(Compare.this, compareEntry.class));
+        //startActivity(new Intent(Compare.this, compareEntry.class));
         finish();
     }
 }

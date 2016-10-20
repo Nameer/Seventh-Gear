@@ -31,7 +31,7 @@
         <activity
             android:name=".filter"
             android:label="Filter"
-            android:noHistory="true" />
+            android:noHistory="false" />
         <activity
             android:name=".Compare"
             android:label="Compare"
@@ -46,9 +46,12 @@
             android:noHistory="true" />
         <activity
             android:name=".compareEntry"
-            android:label="Choose Cars" />
+            android:label="Choose Cars"
+            android:noHistory="false" />
+
         <activity android:name=".About"
-            android:label="About"></activity>
+            android:label="About"/>
+
     </application>
 
 </manifest>

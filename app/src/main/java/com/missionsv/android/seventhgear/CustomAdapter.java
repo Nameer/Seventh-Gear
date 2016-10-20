@@ -88,14 +88,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         TextView txtId = holder.txtId;
         TextView txtCar = holder.txtCar;
         TextView txtVariant = holder.txtVariant;
-        ImageView Img= holder.Img;
-        String URL=holder.URL;
+        ImageView Img = holder.Img;
+        String URL = holder.URL;
 
         txtId.setText(Integer.toString(dataSet.get(listPosition).getId()));
         txtCar.setText(dataSet.get(listPosition).getCar());
         txtVariant.setText(dataSet.get(listPosition).getVariant());
         // set image here...!!!!!
-
     }
 
     @Override

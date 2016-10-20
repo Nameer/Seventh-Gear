@@ -340,7 +340,7 @@ public class compareEntry extends AppCompatActivity {
                         else {
                             intent.putExtras(b);
                             startActivity(intent);
-                            finish();
+                            //finish();
                         }
                     }
 

@@ -200,7 +200,7 @@ public class filter extends AppCompatActivity {
                                         Intent intent = new Intent(filter.this, SearchResultActivity.class);
                                         intent.putExtras(b);
                                         startActivity(intent);
-                                        finish();
+                                        //finish();
                                         break;
                                     }
 
