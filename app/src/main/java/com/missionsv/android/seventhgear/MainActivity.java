@@ -103,9 +103,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Bundle b = new Bundle();
                     b.putInt("up", aUp); //id
                     b.putInt("car", -1);
+                    b.putString("activity", "MainActivity");
                     intent.putExtras(b); //Put id to next Intent
                     startActivity(intent);
-                    //finish();
+                    finish();
                 }
             }
         });
@@ -119,8 +120,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Bundle b = new Bundle();
                     b.putInt("up", bUp);
                     b.putInt("car", -1);
+                    b.putString("activity", "MainActivity");
                     intent.putExtras(b);
                     startActivity(intent);
+                    finish();
                 }
             }
         });
@@ -134,8 +137,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Bundle b = new Bundle();
                     b.putInt("car", aCar);
                     b.putInt("up", -1);
+                    b.putString("activity", "MainActivity");
                     intent.putExtras(b);
                     startActivity(intent);
+                    finish();
                 }
             }
         });
@@ -150,8 +155,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Bundle b = new Bundle();
                     b.putInt("car", bCar);
                     b.putInt("up", -1);
+                    b.putString("activity", "MainActivity");
                     intent.putExtras(b);
                     startActivity(intent);
+                    finish();
                 }
             }
         });
@@ -309,6 +316,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.fab2: //Filter
                 startActivity(new Intent(MainActivity.this, filter.class));
+                finish();
                 break;
             case R.id.fab3: //About
                 startActivity(new Intent(MainActivity.this, About.class));

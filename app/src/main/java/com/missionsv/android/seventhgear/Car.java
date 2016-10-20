@@ -50,7 +50,7 @@ public class Car extends AppCompatActivity {
 
 
     int id = -1;
-    String child_name;
+    String child_name, caller;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +63,7 @@ public class Car extends AppCompatActivity {
         Bundle b = getIntent().getExtras();
         if(b != null) {
             id = b.getInt("car");
+            caller=b.getString("activity");
             if (id==-1) {
                 child_name = "UPCOMING";
                 id = b.getInt("up");
@@ -158,7 +159,8 @@ public class Car extends AppCompatActivity {
     }
     public void onBackPressed()
     {
-        startActivity(new Intent(Car.this, MainActivity.class));
+        if (caller.compareTo("MainActivity")==0)
+            startActivity(new Intent(Car.this, MainActivity.class));
         finish();
     }
 }

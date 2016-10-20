@@ -43,14 +43,15 @@
         <activity
             android:name=".SearchResultActivity"
             android:label="Cars found"
-            android:noHistory="true" />
+            android:noHistory="false" />
         <activity
             android:name=".compareEntry"
             android:label="Choose Cars"
             android:noHistory="false" />
 
         <activity android:name=".About"
-            android:label="About"/>
+            android:label="About"
+            android:noHistory="true"/>
 
     </application>
 

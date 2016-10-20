@@ -48,6 +48,7 @@ public class SearchResultActivity extends AppCompatActivity {
     static View.OnClickListener myOnClickListener;
     private static ArrayList<Integer> removedItems;
 
+    int lll;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -155,6 +156,7 @@ public class SearchResultActivity extends AppCompatActivity {
             CardView crdView=(CardView) v.findViewById(R.id.card_view);
             b.putInt("car",Integer.parseInt((String) txtId.getText()));
             b.putInt("up", -1);
+            b.putString("activity", "SearchResultActivity");
             intent.putExtras(b);
             v.getContext().startActivity(intent);
             this.context.startActivity(intent);
