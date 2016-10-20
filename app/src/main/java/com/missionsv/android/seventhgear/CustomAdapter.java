@@ -12,10 +12,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.io.InputStream;
+import java.net.URL;
 import java.util.ArrayList;
 
 import static com.missionsv.android.seventhgear.R.id.txtId;
+import static com.missionsv.android.seventhgear.R.id.txtURL;
 
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
@@ -28,8 +32,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         TextView txtId;
         TextView txtCar;
         TextView txtVariant;
+        TextView txtURL;
         ImageView Img;
-        String URL;
 
 
         public MyViewHolder(View itemView) {
@@ -37,6 +41,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             this.txtId = (TextView) itemView.findViewById(R.id.txtId);
             this.txtCar = (TextView) itemView.findViewById(R.id.txtCar);
             this.txtVariant = (TextView) itemView.findViewById(R.id.txtVariant);
+            this.txtURL = (TextView) itemView.findViewById(R.id.txtURL);
             this.Img= (ImageView) itemView.findViewById(R.id.img);
         }
     }
@@ -88,13 +93,26 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         TextView txtId = holder.txtId;
         TextView txtCar = holder.txtCar;
         TextView txtVariant = holder.txtVariant;
+        TextView txtURL = holder.txtURL;
         ImageView Img = holder.Img;
-        String URL = holder.URL;
 
         txtId.setText(Integer.toString(dataSet.get(listPosition).getId()));
         txtCar.setText(dataSet.get(listPosition).getCar());
         txtVariant.setText(dataSet.get(listPosition).getVariant());
+        txtURL.setText(dataSet.get(listPosition).getURL());
         // set image here...!!!!!
+
+        if (((String) txtURL.getText()).length() == 0)
+            Img.setImageResource(R.drawable.no_prev);
+        else
+            new ImageDownloader(Img).execute((String) txtURL.getText());
+        /*try {
+            new ImageDownloader(Img).execute(URL);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            Log.e("Image setting", e.getMessage());
+        }*/
     }
 
     @Override

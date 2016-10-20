@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -100,7 +101,7 @@ public class SearchResultActivity extends AppCompatActivity {
                                              data.add(new DataModel(Integer.parseInt(car.getKey()),
                                                      ((String) newPost.get("COMPANY")) + " " + ((String) newPost.get("MODEL")),
                                                      (String) newPost.get("VARIANT"),
-                                                     (String) newPost.get("URL")));
+                                                     (String) newPost.get("IMAGE LINK")));
                                              found++;
                                          }
                                 }
@@ -151,6 +152,7 @@ public class SearchResultActivity extends AppCompatActivity {
             Intent intent = new Intent(this.context, Car.class);
             Bundle b = new Bundle();
             TextView txtId=(TextView) v.findViewById(R.id.txtId);
+            CardView crdView=(CardView) v.findViewById(R.id.card_view);
             b.putInt("car",Integer.parseInt((String) txtId.getText()));
             b.putInt("up", -1);
             intent.putExtras(b);
